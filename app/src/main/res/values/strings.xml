@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Homework3Lesson4</string>
+<!--    <string name="app_name">Homework3Lesson4</string>-->
+    <string name="app_name">CardViewRCV</string>
+    <array name="books">
+        <item>Java</item>
+        <item>Javascript</item>
+        <item>Python</item>
+
+    </array>
+    <array name="desc">
+        <item>Most important language for backend</item>
+        <item>It is language for front end </item>
+        <item>Developing language in the future</item>
+    </array>
+
+    <array name="detail">
+        <item> Java platform-independent language, \nmeaning that it can run on any operating \nsystonce and run it anywhere.\nJava code is compiled into bytecode, w\n
+            hich can be run on any platform that has a Java Virtual Machine (JVM) installed.</item>
+        <item>JavaScript is a client-side scripting language, \nwhich means it runs directly in a user's web browser.
+
+            \nJavaScript is often used to add interactivity and functionality to web pages, \nsuch as form validation, animations, and dynamic content updates.</item>
+        <item>Python is an interpreted language, \nmeaning that code is executed line-by-line instead of \ncompiled ahead of time.
+
+            \nPython is dynamically typed, \nmeaning that variable types are determined at \nruntime instead of being declared in advance. </item>
+    </array>
 </resources>

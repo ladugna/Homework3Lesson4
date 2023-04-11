@@ -1,9 +1,11 @@
 package com.example.homework3lesson4
 
 import android.app.Activity
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.example.homework3lesson4.databinding.ActivityThirdBinding
 
@@ -22,6 +24,24 @@ class ThirdActivity : AppCompatActivity() {
 //        var result= r_intent.getStringExtra("message")
 //        binding.reso.text=result
        // Toast.makeText(this, res.toString(), Toast.LENGTH_LONG).show()
+        binding.book.setOnClickListener {
+//            val intent = Intent(applicationContext, BookActivity::class.java)
+            val intent = Intent(applicationContext, ForBookActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
+
+
+
 
     }
+
+    fun medicineclick(view: View) {
+
+    }
+
+//    fun bookClick(view: View) {}
+
 }

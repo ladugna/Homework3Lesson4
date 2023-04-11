@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.homework3lesson4.databinding.ActivityMainBinding
 import java.io.Serializable
-
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
@@ -40,13 +39,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, " User added Successfully now ${list.size}" +
                     " in total", Toast.LENGTH_LONG).show()
         }
-
         binding.crtBtn.setOnClickListener {
             val intent = Intent(this, secondActivity::class.java)
             //intent.putExtra(email1)
             startActivity(intent)
         }
-
         binding.signInBtn.setOnClickListener {
             var email1 = binding.email.text.toString()
             var password = binding.editTextTextPersonName2.text.toString()
@@ -63,7 +60,6 @@ class MainActivity : AppCompatActivity() {
                     break
                 }
             }
-
             // val account= User(email1, password)
             if (isValid) {
                 val acc = email1
@@ -77,9 +73,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
-
-
        binding.forgot.setOnClickListener {
             val recipient = binding.email.text.toString()
             val subject = "Password Recovery"
@@ -92,24 +85,18 @@ class MainActivity : AppCompatActivity() {
                         val emailUri = Uri.parse("mailto:$recipient?subject=$subject&body=$body ")
                         val emailIntent = Intent(Intent.ACTION_SENDTO, emailUri)
                         if (emailIntent.resolveActivity(packageManager) != null) {
-                            val x = "Here is your  password : ${usr.password}"
+                            val body = "Here is your  password : ${usr.password}"
                             startActivity(emailIntent)
                         } else {
                             Toast.makeText(this,"No Email client Found",Toast.LENGTH_LONG).show()
                         }
-
-
                         //startActivity(Intent.createChooser(emailIntent, "Choose an email client:"))
                     }
                 }
-
-
             }
         }
-
     }
 }
-
 private fun Intent.getSerializable(s: String): Serializable? {
     return this.getSerializableExtra(s)
 }
